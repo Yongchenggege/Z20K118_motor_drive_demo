@@ -1,0 +1,21 @@
+--cpu Cortex-M0+
+".\objects\z20k118m_startup.o"
+".\objects\main.o"
+".\objects\led.o"
+".\objects\pwm.o"
+".\objects\uart.o"
+".\objects\delay.o"
+".\objects\drv10970.o"
+".\objects\enconder.o"
+".\objects\z20k11xm_gpio.o"
+".\objects\z20k11xm_clock.o"
+".\objects\z20k11xm_tim.o"
+".\objects\z20k11xm_uart.o"
+".\objects\z20k11xm_drv.o"
+".\objects\z20k11xm_sysctrl.o"
+".\objects\z20k11xm_wdog.o"
+".\objects\z20k11xm_stim.o"
+--library_type=microlib --strict --scatter ".\Platform\Devices\Z20K118M\MakeRule\ARMC\Z20K118M_flash.scf"
+--entry=Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\magic.map" -o .\Objects\magic.axf
